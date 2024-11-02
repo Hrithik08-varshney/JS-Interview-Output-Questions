@@ -33,3 +33,28 @@ for (var i=0;i<3;i++){
       <summary>Explanation</summary>
       Here, `let` is block-scoped, so each iteration of the loop creates a new block scope for `i`. Each `setTimeout` callback captures the correct `i` value for that iteration, resulting in 0, 1, and 2 being logged sequentially.
 </details>
+
+---
+
+3. **What will be the output?**
+
+```javascript
+    function Person(firstName,lastName){
+this.firstName = firstName;
+this.lastName = lastName;
+};
+const js = new Person('Js','react');
+const coder = Person('coder','angular');
+console.log(js);
+console.log(coder);
+```
+<details>
+ <summary>Answer</summary>
+<b>Person { firstName: 'Js', lastName: 'react' }</b> <br/>
+<b>undefined</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+-> Because js is created with the new keyword, it is an instance of the Person class, and the properties firstName and lastName are assigned to it. <br/>
+-> Since Person is called without the new keyword for coder, it is executed as a regular function, and this refers to the global object (window in browsers or global in Node.js). As a result, firstName and lastName are assigned to the global scope, and coder itself is undefined.
+</details>
