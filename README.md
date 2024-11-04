@@ -9,7 +9,7 @@ for (var i=0;i<3;i++){
 ```
 <details>
   <summary>Answer</summary>
-  3 3 3
+  <b>3 3 3</b>
 </details>
 <details>
   <summary>Explanation</summary>
@@ -27,7 +27,7 @@ for (var i=0;i<3;i++){
 ```
 <details>
       <summary>Answer</summary>
-      0 1 2
+     <b>0 1 2</b> 
 </details>
 <details>
       <summary>Explanation</summary>
@@ -57,4 +57,47 @@ console.log(coder);
  <summary>Explanation</summary>
 -> Because js is created with the new keyword, it is an instance of the Person class, and the properties firstName and lastName are assigned to it. <br/>
 -> Since Person is called without the new keyword for coder, it is executed as a regular function, and this refers to the global object (window in browsers or global in Node.js). As a result, firstName and lastName are assigned to the global scope, and coder itself is undefined.
+</details>
+
+---
+
+4. **What will be the output?**
+
+```javascript
+   const object1 = {
+    a: 10,
+    b: 20,
+    c: function() {
+        console.log(this.a + this.b);
+    }
+};
+
+const func = object1.c;
+func();
+
+```
+<details>
+ <summary>Answer</summary>
+<b>NaN</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+<h4>Step-by-Step Breakdown</h4>
+
+<ol>
+    <li><code>object1</code> is an object with three properties:
+        <ul>
+            <li><code>a</code> with a value of <code>10</code>.</li>
+            <li><code>b</code> with a value of <code>20</code>.</li>
+            <li><code>c</code>, a function that logs the sum of <code>this.a</code> and <code>this.b</code>.</li>
+        </ul>
+    </li>
+    <li><code>const func = object1.c;</code> assigns a reference of <code>object1.c</code> to <code>func</code>. However, this reference no longer retains <code>object1</code> as its context.</li>
+    <li>When <code>func()</code> is called, it executes <code>object1.c</code> as a standalone function, with <code>this</code> no longer bound to <code>object1</code>. As a result:
+        <ul>
+            <li>In <strong>strict mode</strong>, <code>this</code> is <code>undefined</code>, causing an error.</li>
+            <li>In <strong>non-strict mode</strong>, <code>this</code> refers to the global object, where <code>a</code> and <code>b</code> are undefined, resulting in <code>NaN</code> (since <code>undefined + undefined</code> is <code>NaN</code>).</li>
+        </ul>
+    </li>
+</ol>
 </details>
