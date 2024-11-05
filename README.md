@@ -101,3 +101,36 @@ func();
     </li>
 </ol>
 </details>
+
+---
+
+5. **What will be the output?**
+
+```javascript
+const object1 = {
+    a: 10,
+    b: 20,
+    c: function() {
+        console.log(this.a + this.b);
+    }
+};
+
+const func = object1.c.bind(object1);
+func();
+
+```
+<details>
+ <summary>Answer</summary>
+<b>30</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+ <p>This code defines an object, <code>object1</code>, with three properties:</p>
+    <ul>
+        <li><code>a</code>: A property with the value <code>10</code>.</li>
+        <li><code>b</code>: A property with the value <code>20</code>.</li>
+        <li><code>c</code>: A function that, when called, logs the sum of <code>a</code> and <code>b</code> using <code>this.a + this.b</code>.</li>
+    </ul>
+    <p>Next, we create a new variable, <code>func</code>, which stores the <code>c</code> function bound to <code>object1</code> using <code>bind</code>. Binding ensures that the value of <code>this</code> inside <code>c</code> always refers to <code>object1</code>.</p>
+    <p>When <code>func()</code> is called, it invokes the bound function, logging <code>this.a + this.b</code>, which is <code>10 + 20</code>, resulting in <code>30</code>.</p>
+</details>
