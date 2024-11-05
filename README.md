@@ -134,3 +134,28 @@ func();
     <p>Next, we create a new variable, <code>func</code>, which stores the <code>c</code> function bound to <code>object1</code> using <code>bind</code>. Binding ensures that the value of <code>this</code> inside <code>c</code> always refers to <code>object1</code>.</p>
     <p>When <code>func()</code> is called, it invokes the bound function, logging <code>this.a + this.b</code>, which is <code>10 + 20</code>, resulting in <code>30</code>.</p>
 </details>
+
+---
+
+6. **What will be the output?**
+
+```javascript
+console.log(a);
+console.log(b);
+var a = b = 5;
+
+```
+<details>
+ <summary>Answer</summary>
+<b>undefined</b><br/>
+<b>5</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+ <ul>
+    <li><code>var a = b = 5;</code> assigns <code>5</code> to <code>b</code> first, making <code>b</code> a global variable. Then, <code>a</code> is declared as a local variable (if inside a function) with <code>var</code> and also assigned <code>5</code>.</li>
+    <li><code>console.log(a);</code> tries to log <code>a</code> before it's defined, so it outputs <code>undefined</code> due to variable hoisting.</li>
+    <li><code>console.log(b);</code> logs <code>5</code> because <code>b</code> is assigned a value before it's accessed.</li>
+  </ul>
+</details>
+
