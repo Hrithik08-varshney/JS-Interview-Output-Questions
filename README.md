@@ -159,3 +159,38 @@ var a = b = 5;
   </ul>
 </details>
 
+---
+
+7. **What will be the output?**
+
+```javascript
+var a = 5;
+console.log(a++);
+console.log(a);
+
+```
+<details>
+ <summary>Answer</summary>
+<b>5</b><br/>
+<b>6</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+ <ol>
+        <li>
+            <p><code>console.log(a++);</code>:</p>
+            <ul>
+                <li>The <code>a++</code> operation is a <strong>post-increment</strong>. This means the current value of <code>a</code> (which is 5) is first used in the expression, then <code>a</code> is incremented by 1.</li>
+                <li>So, <code>console.log(a++)</code> will print <strong>5</strong> and then increment <code>a</code> to <strong>6</strong>.</li>
+            </ul>
+        </li>
+        <li>
+            <p><code>console.log(a);</code>:</p>
+            <ul>
+                <li>By this point, <code>a</code> has been incremented to <strong>6</strong>, so this line will print <strong>6</strong>.</li>
+            </ul>
+        </li>
+    </ol>
+</details>
+
+
