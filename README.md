@@ -193,4 +193,39 @@ console.log(a);
     </ol>
 </details>
 
+---
+
+8. **What will be the output?**
+
+```javascript
+console.log(1 < 2 < 3);
+console.log(3 > 2 > 1);
+
+```
+<details>
+ <summary>Answer</summary>
+<b>true</b><br/>
+<b>false</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+<h4>1. <code>1 &lt; 2 &lt; 3</code>:</h4>
+  <ul>
+    <li>This is evaluated as <code>(1 &lt; 2) &lt; 3</code>.</li>
+    <li>First, <code>1 &lt; 2</code> is <code>true</code>.</li>
+    <li>Then, <code>true</code> is implicitly converted to <code>1</code> in the comparison <code>1 &lt; 3</code>, which is also <code>true</code>.</li>
+  </ul>
+  <p><strong>Output:</strong> <code>true</code></p>
+  
+  <h4>2. <code>3 &gt; 2 &gt; 1</code>:</h4>
+  <ul>
+    <li>This is evaluated as <code>(3 &gt; 2) &gt; 1</code>.</li>
+    <li>First, <code>3 &gt; 2</code> is <code>true</code>.</li>
+    <li>Then, <code>true</code> is implicitly converted to <code>1</code> in the comparison <code>1 &gt; 1</code>, which is <code>false</code>.</li>
+  </ul>
+  <p><strong>Output:</strong> <code>false</code></p>
+
+</details>
+
+
 
