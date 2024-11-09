@@ -227,5 +227,28 @@ console.log(3 > 2 > 1);
 
 </details>
 
+---
 
+9. **What will be the output?**
 
+```javascript
+const foo = () => {
+  console.log(this.name);
+};
+
+foo.call({ name: 'John' });
+
+```
+<details>
+ <summary>Answer</summary>
+<b>undefined</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+<ul>
+  <li>Arrow functions do <strong>not have their own <code>this</code></strong> context; they inherit <code>this</code> from their <strong>enclosing lexical scope</strong>.</li>
+  <li><code>.call()</code> does not change the value of <code>this</code> for arrow functions.</li>
+  <li>In strict mode, <code>this</code> is <code>undefined</code>, causing a <strong>TypeError</strong>.</li>
+  <li>In non-strict mode, <code>this</code> refers to the global object (<code>window</code> in browsers), and <code>this.name</code> is <code>undefined</code>.</li>
+</ul>
+</details>
