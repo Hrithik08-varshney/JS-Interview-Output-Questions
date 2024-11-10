@@ -252,3 +252,34 @@ foo.call({ name: 'John' });
   <li>In non-strict mode, <code>this</code> refers to the global object (<code>window</code> in browsers), and <code>this.name</code> is <code>undefined</code>.</li>
 </ul>
 </details>
+
+---
+
+10. **What will be the output?**
+
+```javascript
+const foo = function () {
+  const bar = () => {
+    console.log(this.name);
+  };
+  bar();
+};
+
+foo.call({ name: 'John' });
+```
+<details>
+ <summary>Answer</summary>
+<b>John</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+<p>
+The function <code>foo</code> is called using <code>.call()</code> with an object <code>{ name: 'John' }</code>. This sets the <code>this</code> context inside <code>foo</code> to the provided object.
+</p>
+<p>
+Within <code>foo</code>, there is an arrow function <code>bar</code>. Arrow functions do not have their own <code>this</code>; they inherit <code>this</code> from their surrounding context. Here, the surrounding context is <code>foo</code>, which has its <code>this</code> set to <code>{ name: 'John' }</code>.
+</p>
+<p>
+When <code>bar()</code> is called, it accesses <code>this.name</code>, which refers to <code>'John'</code>, and logs it to the console.
+</p>
+</details>
