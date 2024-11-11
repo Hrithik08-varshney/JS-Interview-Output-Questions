@@ -283,3 +283,42 @@ Within <code>foo</code>, there is an arrow function <code>bar</code>. Arrow func
 When <code>bar()</code> is called, it accesses <code>this.name</code>, which refers to <code>'John'</code>, and logs it to the console.
 </p>
 </details>
+
+---
+
+11. **What will be the output?**
+
+```javascript
+var output = (function(x) {
+    delete x;
+    return x;
+})({ x: 100 });
+
+console.log(output);
+
+```
+<details>
+ <summary>Answer</summary>
+<b>{ x: 100 }</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+<ol>
+    <li>
+        <strong>Input:</strong>
+        <p>You are passing an object <code>{ x: 100 }</code> to the function as the parameter <code>x</code>.</p>
+    </li>
+    <li>
+        <strong>Delete Operation:</strong>
+        <p><code>delete x;</code> tries to delete the entire <code>x</code> parameter. However, the <code>delete</code> operator only works on object properties, not function parameters.</p>
+    </li>
+    <li>
+        <strong>Return Value:</strong>
+        <p>The function returns <code>x</code>, which is still the original object <code>{ x: 100 }</code> because <code>delete x;</code> had no effect.</p>
+    </li>
+    <li>
+        <strong>Output:</strong>
+        <p class="output">{ x: 100 }</p>
+    </li>
+</ol>
+</details>
