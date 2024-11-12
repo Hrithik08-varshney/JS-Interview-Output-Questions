@@ -322,3 +322,24 @@ console.log(output);
     </li>
 </ol>
 </details>
+
+---
+
+12. **What will be the output?**
+
+```javascript
+const arr1 = [1, 2, 3, 4, 5, 6, 7, 8];
+delete arr1[5];
+console.log(arr1.length, arr1);
+```
+<details>
+ <summary>Answer</summary>
+<b>8</b> <b>[1, 2, 3, 4, 5, <1 empty item>, 7, 8]</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+<ul>
+  <li>The <code>delete</code> operator removes the value at the specified index but <strong>does not update the length</strong> of the array.</li>
+  <li>It creates an <strong>empty (undefined) slot</strong> at the deleted index, making it a <em>sparse array</em>.</li>
+</ul>
+</details>
