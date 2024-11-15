@@ -343,3 +343,16 @@ console.log(arr1.length, arr1);
   <li>It creates an <strong>empty (undefined) slot</strong> at the deleted index, making it a <em>sparse array</em>.</li>
 </ul>
 </details>
+
+---
+
+13. **How to empty this array?**
+
+```javascript
+const arr2 = [1, 2, 3, 4, 5, 6, 7, 8];
+```
+<details>
+ <summary>Answer</summary>
+<b>arr2.length = 0</b><br/>
+<b>arr2.splice(0, arr2.length)</b><br/>
+</details>
