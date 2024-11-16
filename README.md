@@ -356,3 +356,40 @@ const arr2 = [1, 2, 3, 4, 5, 6, 7, 8];
 <b>arr2.length = 0</b><br/>
 <b>arr2.splice(0, arr2.length)</b><br/>
 </details>
+
+---
+
+14. **What will be the output?**
+
+```javascript
+console.log(typeof([]));
+console.log(typeof(typeof(3)))
+```
+<details>
+ <summary>Answer</summary>
+<h2>Example 1: <code>typeof([])</code></h2>
+  <p>
+    The expression <code>typeof([])</code> returns <strong>"object"</strong>.
+    In JavaScript, arrays are a type of object, so <code>typeof</code> will return "object" for arrays.
+  </p>
+  <pre>
+    <code>
+      console.log(typeof([])); // Output: "object"
+    </code>
+  </pre>
+
+  <h2>Example 2: <code>typeof(typeof(3))</code></h2>
+  <p>
+    The expression <code>typeof(typeof(3))</code> returns <strong>"string"</strong>.
+    Here's why:
+    <ul>
+      <li><code>typeof(3)</code> evaluates to <code>"number"</code> because <code>3</code> is a number.</li>
+      <li><code>typeof("number")</code> evaluates to <code>"string"</code> because the result of the first <code>typeof</code> is a string.</li>
+    </ul>
+  </p>
+  <pre>
+    <code>
+      console.log(typeof(typeof(3))); // Output: "string"
+    </code>
+  </pre>
+</details>
