@@ -393,3 +393,54 @@ console.log(typeof(typeof(3)))
     </code>
   </pre>
 </details>
+
+---
+
+15. **What will be the output?**
+
+```javascript
+Promise.resolve(1)
+  .then((x) => x + 1)
+  .then((x) => {
+    throw new Error('My Error');
+  })
+  .catch(() => 1)
+  .then((x) => x + 1)
+  .then((x) => console.log(x))
+  .catch((error) => console.log(error));
+
+```
+<details>
+ <summary>Answer</summary>
+<b>2</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+<p>
+  This code demonstrates a chain of <code>Promise</code> methods:
+</p>
+<ol>
+  <li>
+    It starts with <code>Promise.resolve(1)</code>, which resolves with the value <code>1</code>.
+  </li>
+  <li>
+    The first <code>then</code> handler adds <code>1</code> to the resolved value, making it <code>2</code>.
+  </li>
+  <li>
+    The next <code>then</code> handler throws an error with the message <code>'My Error'</code>.
+  </li>
+  <li>
+    The <code>catch</code> block handles this error and returns <code>1</code>.
+  </li>
+  <li>
+    The next <code>then</code> handler adds <code>1</code> again, making the value <code>2</code>.
+  </li>
+  <li>
+    Finally, <code>console.log</code> outputs <code>2</code> to the console.
+  </li>
+</ol>
+<p>
+  If there were any error not caught earlier, the final <code>catch</code> would log it to the console.
+</p>
+</details>
+
