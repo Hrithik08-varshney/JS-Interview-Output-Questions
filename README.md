@@ -444,3 +444,71 @@ Promise.resolve(1)
 </p>
 </details>
 
+---
+
+16. **What will be the output?**
+
+```javascript
+console.log("1");
+
+setTimeout(() => {
+  console.log("2");
+}, 10);
+
+setTimeout(() => {
+  console.log("3");
+}, 0);
+
+setTimeout(() => {
+  console.log("4");
+});
+
+Promise.resolve()
+  .then(() => {
+    console.log("5");
+  })
+  .then(() => {
+    console.log("6");
+  });
+
+console.log("7");
+
+
+```
+<details>
+ <summary>Answer</summary>
+<b>1</b><br/>
+<b>7</b><br/>
+<b>5</b><br/>
+<b>6</b><br/>
+<b>3</b><br/>
+<b>4</b><br/>
+<b>2</b><br/>
+</details>
+<details>
+ <summary>Explanation</summary>
+  <ol>
+    <li><strong>Synchronous Code Execution:</strong>
+      <ul>
+        <li><code>console.log("1")</code> → Prints <code>1</code>.</li>
+        <li><code>console.log("7")</code> → Prints <code>7</code>.</li>
+      </ul>
+    </li>
+    <li><strong>Microtasks (Promises):</strong>
+      <ul>
+        <li><code>Promise.resolve().then(...)</code> queues a microtask.</li>
+        <li><code>console.log("5")</code> → Prints <code>5</code>.</li>
+        <li><code>console.log("6")</code> → Prints <code>6</code>.</li>
+      </ul>
+    </li>
+    <li><strong>Macrotasks (setTimeout):</strong>
+      <ul>
+        <li><code>setTimeout(..., 0)</code> and <code>setTimeout(...)</code> (default 0) are macrotasks.</li>
+        <li><code>console.log("3")</code> → Prints <code>3</code> (queued with <code>0ms</code> delay).</li>
+        <li><code>console.log("4")</code> → Prints <code>4</code> (queued with <code>0ms</code> delay).</li>
+        <li><code>console.log("2")</code> → Prints <code>2</code> (queued with <code>10ms</code> delay).</li>
+      </ul>
+    </li>
+  </ol>
+</details>
+
