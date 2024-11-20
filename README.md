@@ -532,3 +532,26 @@ The code first creates an object x with two properties b and c, and assigns it t
 
 Finally, the length of the array y (which is the number of keys in x) is printed to the console using console.log(). Since y has two elements, the output of y.length will be 2.
 </details>
+
+---
+
+18. **What will be the output?**
+
+```javascript
+let x = '{ "b": 1, "c": 2 }';
+let y = JSON.parse(x);
+console.log(typeof y);
+
+```
+<details>
+ <summary>Answer</summary>
+<b>object</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+<p>
+  <strong>Explanation:</strong>
+  The <code>JSON.parse(x)</code> method parses the JSON string <code>x</code> into a JavaScript object.
+  The <code>typeof</code> operator applied to an object returns <code>"object"</code>.
+</p>
+</details>
