@@ -555,3 +555,26 @@ console.log(typeof y);
   The <code>typeof</code> operator applied to an object returns <code>"object"</code>.
 </p>
 </details>
+
+---
+
+19. **What will be the output?**
+
+```javascript
+let x = 0.1 + 0.2;
+let y = 0.3;
+console.log(x == y);
+
+```
+<details>
+ <summary>Answer</summary>
+<b>false</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+<p>In JavaScript, numbers are represented as 64-bit floating-point numbers, which can lead to precision errors when performing arithmetic operations.</p>
+    <ul>
+        <li><code>0.1 + 0.2</code> results in <code>0.30000000000000004</code> due to floating-point precision issues.</li>
+        <li><code>x == y</code> evaluates <code>0.30000000000000004 == 0.3</code>, which is <code>false</code>.</li>
+    </ul>
+</details>
