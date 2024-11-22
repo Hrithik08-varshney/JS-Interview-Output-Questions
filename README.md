@@ -578,3 +578,42 @@ console.log(x == y);
         <li><code>x == y</code> evaluates <code>0.30000000000000004 == 0.3</code>, which is <code>false</code>.</li>
     </ul>
 </details>
+
+---
+
+20. **What will be the output?**
+
+```javascript
+let x = false;
+let y = "0";
+let z = 0;
+
+console.log(x == y);
+console.log(x == z);
+
+```
+<details>
+ <summary>Answer</summary>
+<b>true</b><br/>
+<b>true</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+   <ul>
+        <li><strong>x == y (false == "0"):</strong>
+            <ul>
+                <li>Loose equality (<code>==</code>) causes type coercion.</li>
+                <li><code>false</code> is coerced to the number <code>0</code>.</li>
+                <li>The string <code>"0"</code> is also coerced to the number <code>0</code>.</li>
+                <li>Now, the comparison becomes <code>0 == 0</code>, which is <code>true</code>.</li>
+            </ul>
+        </li>
+        <li><strong>x == z (false == 0):</strong>
+            <ul>
+                <li><code>false</code> is coerced to the number <code>0</code>.</li>
+                <li>The comparison becomes <code>0 == 0</code>, which is <code>true</code>.</li>
+            </ul>
+        </li>
+    </ul>
+</details>
+
