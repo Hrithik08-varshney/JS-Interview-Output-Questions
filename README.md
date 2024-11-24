@@ -617,3 +617,29 @@ console.log(x == z);
     </ul>
 </details>
 
+---
+
+21. **What will be the output?**
+
+```javascript
+let x = [];
+console.log(Boolean(x));
+
+```
+<details>
+ <summary>Answer</summary>
+<b>true</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+   <ul>
+        <li>In JavaScript, an empty array <code>[]</code> is considered a <strong>truthy</strong> value.</li>
+        <li>When converted to a boolean using <code>Boolean(x)</code>, it evaluates to <code>true</code>.</li>
+        <li>This happens because arrays in JavaScript are objects, and all objects are truthy, regardless of their content.</li>
+    </ul>
+    <h3>Key Points:</h3>
+    <ul>
+        <li>An empty array <code>[]</code> is not <code>false</code> or <code>null</code>.</li>
+        <li>It is treated as a valid object and hence is truthy.</li>
+    </ul>
+</details>
