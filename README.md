@@ -643,3 +643,22 @@ console.log(Boolean(x));
         <li>It is treated as a valid object and hence is truthy.</li>
     </ul>
 </details>
+
+---
+
+22. **What will be the output?**
+
+```javascript
+let x = Infinity;
+console.log(typeof x);
+
+```
+<details>
+ <summary>Answer</summary>
+<b>number</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+ In JavaScript, Infinity is a special numeric value that represents positive infinity. It is a primitive value of the number data type. When you use the typeof operator to check the type of x, it will return “number” because Infinity is a number value, albeit a special one.
+</details>
+
