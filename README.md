@@ -662,3 +662,40 @@ console.log(typeof x);
  In JavaScript, Infinity is a special numeric value that represents positive infinity. It is a primitive value of the number data type. When you use the typeof operator to check the type of x, it will return “number” because Infinity is a number value, albeit a special one.
 </details>
 
+---
+
+23. **What will be the output?**
+
+```javascript
+let x = "5";
+let y = 2;
+
+console.log(x + y);
+console.log(x - y);
+```
+<details>
+ <summary>Answer</summary>
+<b>52</b><br/>
+<b>3</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+   <ol>
+        <li>
+            <strong><code>x + y</code></strong>:
+            <ul>
+                <li><code>x</code> is a string ("5"), and <code>y</code> is a number (2).</li>
+                <li>The <code>+</code> operator performs <em>string concatenation</em> when one operand is a string.</li>
+                <li>Result: <code>"5" + "2"</code> → <code>"52"</code> (string).</li>
+            </ul>
+        </li>
+        <li>
+            <strong><code>x - y</code></strong>:
+            <ul>
+                <li>The <code>-</code> operator attempts numeric conversion for both operands.</li>
+                <li><code>"5"</code> is converted to the number <code>5</code>, and <code>2</code> remains as <code>2</code>.</li>
+                <li>Result: <code>5 - 2</code> → <code>3</code> (number).</li>
+            </ul>
+        </li>
+    </ol>
+</details>
