@@ -699,3 +699,34 @@ console.log(x - y);
         </li>
     </ol>
 </details>
+
+---
+
+24. **What will be the output?**
+
+```javascript
+let a = () => {
+  console.log(this);
+};
+
+a();
+```
+<details>
+ <summary>Answer</summary>
+<b>window</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+  <h2>1. In the Browser (Global Scope):</h2>
+  <ul>
+    <li><code>this</code> in the global context refers to the <code>window</code> object.</li>
+    <li><span class="output">Output:</span> <code>Window { ... }</code></li>
+  </ul>
+  <h2>2. In Node.js (Global Scope):</h2>
+  <ul>
+    <li><code>this</code> in the global context refers to an empty object (<code>{}</code>) in strict mode, which is the default for ES6 modules.</li>
+    <li><span class="output">Output:</span> <code>{}</code></li>
+  </ul>
+  <p>Arrow functions inherit <code>this</code> from their surrounding scope, so its behavior varies based on where it is executed.</p>
+</details>
+
