@@ -730,3 +730,30 @@ a();
   <p>Arrow functions inherit <code>this</code> from their surrounding scope, so its behavior varies based on where it is executed.</p>
 </details>
 
+---
+
+25. **What will be the output?**
+
+```javascript
+let x = "hello";
+let y = new String("hello");
+
+console.log(x == y);
+console.log(x === y);
+```
+<details>
+ <summary>Answer</summary>
+<b>true</b><br/><b>false</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+ <h3>1. <code>x == y</code></h3>
+    <p>The <code>==</code> operator performs type coercion. This means that the <code>String</code> object (<code>y</code>) is converted to a primitive string before comparison.</p>
+    <p>After type coercion, both <code>x</code> and <code>y</code> are primitive strings with the value <code>"hello"</code>. Since their values are the same, the comparison returns <code>true</code>.</p>
+
+    <h3>2. <code>x === y</code></h3>
+    <p>The <code>===</code> operator does not perform type coercion. It checks for both value and type.</p>
+    <p><code>x</code> is a primitive string, while <code>y</code> is a <code>String</code> object. Since their types are different, the comparison returns <code>false</code>.</p>
+</body>
+</details>
+
