@@ -757,3 +757,40 @@ console.log(x === y);
 </body>
 </details>
 
+---
+
+26. **What will be the output?**
+
+```javascript
+let x = [];
+let y = [];
+let z = x + y;
+
+console.log(typeof z);
+```
+<details>
+ <summary>Answer</summary>
+<b>string</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+ <ol>
+        <li>
+            <strong><code>x</code> and <code>y</code> are empty arrays (<code>[]</code>)</strong>: 
+            When arrays are added using the <code>+</code> operator, JavaScript implicitly converts them to strings by calling their <code>toString()</code> method.
+            <ul>
+                <li><code>[].toString()</code> results in an empty string <code>""</code>.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Concatenation of two strings</strong>: 
+            Adding two empty strings (<code>"" + ""</code>) results in another empty string <code>""</code>.
+        </li>
+        <li>
+            <strong><code>typeof z</code></strong>: 
+            The type of an empty string is <code>"string"</code>.
+        </li>
+    </ol>
+</body>
+</details>
+
