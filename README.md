@@ -794,3 +794,54 @@ console.log(typeof z);
 </body>
 </details>
 
+---
+
+27. **What will be the output?**
+
+```javascript
+let x = true;
+let y = false;
+let z = x + y && x * y;
+
+console.log(z);
+```
+<details>
+ <summary>Answer</summary>
+<b>0</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+  <ol>
+        <li><strong>Initial Values:</strong>
+            <ul>
+                <li><code>x = true</code></li>
+                <li><code>y = false</code></li>
+            </ul>
+        </li>
+        <li><strong>Evaluate <code>x + y</code>:</strong>
+            <ul>
+                <li><code>true</code> is coerced to <code>1</code> and <code>false</code> to <code>0</code>.</li>
+                <li><code>x + y = 1 + 0 = 1</code></li>
+            </ul>
+        </li>
+        <li><strong>Evaluate <code>x * y</code>:</strong>
+            <ul>
+                <li><code>true</code> is coerced to <code>1</code> and <code>false</code> to <code>0</code>.</li>
+                <li><code>x * y = 1 * 0 = 0</code></li>
+            </ul>
+        </li>
+        <li><strong>Logical AND (<code>&&</code>):</strong>
+            <ul>
+                <li>The result of <code>x + y</code> is <code>1</code> (truthy).</li>
+                <li>The result of <code>x * y</code> is <code>0</code>.</li>
+                <li><code>1 && 0</code> returns <code>0</code>.</li>
+            </ul>
+        </li>
+        <li><strong>Final Value:</strong>
+            <ul>
+                <li><code>z = 0</code></li>
+            </ul>
+        </li>
+    </ol>
+</body>
+</details>
