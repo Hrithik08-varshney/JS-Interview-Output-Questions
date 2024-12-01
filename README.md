@@ -845,3 +845,31 @@ console.log(z);
     </ol>
 </body>
 </details>
+
+---
+
+28. **What will be the output?**
+
+```javascript
+function foo(a, b) {
+  console.log(arguments[1]);
+}
+
+foo(3);
+```
+<details>
+ <summary>Answer</summary>
+<b>undefined</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+<ol>
+  <li>
+    The function <code>foo</code> is called with only <strong>one argument</strong> (<code>3</code>), so <code>arguments[1]</code> does not exist.
+  </li>
+  <li>
+    Since <code>arguments[1]</code> refers to the second argument passed to the function and no such argument was provided, its value is <code>undefined</code>.
+  </li>
+</ol>
+</body>
+</details>
