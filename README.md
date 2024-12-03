@@ -873,3 +873,25 @@ foo(3);
 </ol>
 </body>
 </details>
+
+---
+
+29. **What will be the output?**
+
+```javascript
+let x = "false";
+let y = !x;
+
+console.log(y);
+```
+<details>
+ <summary>Answer</summary>
+<b>false</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+In this code, x is a string containing the value “false”. When you use the logical NOT operator (!) with a non-Boolean value, JavaScript will first convert the value to a Boolean and then negate it. Since “false” is a non-empty string, it is considered a truthy value when converted to Boolean, so !x will be the same as !true, which is false.
+
+Therefore, when y is logged into the console, it will output false.
+</body>
+</details>
