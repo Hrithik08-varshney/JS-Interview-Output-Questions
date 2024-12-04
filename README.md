@@ -871,7 +871,6 @@ foo(3);
     Since <code>arguments[1]</code> refers to the second argument passed to the function and no such argument was provided, its value is <code>undefined</code>.
   </li>
 </ol>
-</body>
 </details>
 
 ---
@@ -893,5 +892,48 @@ console.log(y);
 In this code, x is a string containing the value “false”. When you use the logical NOT operator (!) with a non-Boolean value, JavaScript will first convert the value to a Boolean and then negate it. Since “false” is a non-empty string, it is considered a truthy value when converted to Boolean, so !x will be the same as !true, which is false.
 
 Therefore, when y is logged into the console, it will output false.
-</body>
 </details>
+
+---
+
+30. **What will be the output?**
+
+```javascript
+let x = 1;
+let y = "1";
+
+console.log(++x, ++y);
+```
+<details>
+ <summary>Answer</summary>
+<b>2, 2</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+<ol>
+        <li>
+            <strong><code>++x</code></strong>:
+            <ul>
+                <li>The <code>++</code> operator increments the value of <code>x</code> by 1.</li>
+                <li>Since <code>x</code> is initially <code>1</code>, it becomes <code>2</code>.</li>
+                <li>The result is <code>2</code>.</li>
+            </ul>
+        </li>
+        <li>
+            <strong><code>++y</code></strong>:
+            <ul>
+                <li>The <code>++</code> operator attempts to increment the value of <code>y</code>.</li>
+                <li>Here, <code>y</code> is a string (<code>"1"</code>).</li>
+                <li>JavaScript implicitly converts <code>"1"</code> to a number (<code>1</code>), increments it by 1, and then assigns the result back to <code>y</code>.</li>
+                <li>So, <code>y</code> becomes the number <code>2</code>.</li>
+                <li>The result is <code>2</code>.</li>
+            </ul>
+        </li>
+    </ol>
+    <h2>Final Values:</h2>
+    <ul>
+        <li><code>x = 2</code> (number)</li>
+        <li><code>y = 2</code> (number)</li>
+    </ul>
+</details>
+
