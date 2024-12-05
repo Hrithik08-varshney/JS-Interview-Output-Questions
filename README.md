@@ -939,7 +939,7 @@ console.log(++x, ++y);
 
 ---
 
-30. **What will be the output?**
+31. **What will be the output?**
 
 ```javascript
 var num = 8;
