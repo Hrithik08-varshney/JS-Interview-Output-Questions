@@ -937,3 +937,33 @@ console.log(++x, ++y);
     </ul>
 </details>
 
+---
+
+30. **What will be the output?**
+
+```javascript
+var num = 8;
+var num = 10;
+
+console.log(num);
+```
+<details>
+ <summary>Answer</summary>
+<b>10</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+ <p>
+        In JavaScript, when using <code>var</code>, variables can be re-declared within the same scope. Here's what happens in the given code:
+    </p>
+    <ol>
+        <li><code>var num = 8;</code>: Declares the variable <code>num</code> and assigns it the value <code>8</code>.</li>
+        <li><code>var num = 10;</code>: Redeclares the variable <code>num</code> and assigns it the value <code>10</code>.</li>
+    </ol>
+    <p>
+        The final value of <code>num</code> is <code>10</code>, which is logged to the console.
+    </p>
+    <p>
+        To prevent re-declaration, you can use <code>let</code> or <code>const</code> instead of <code>var</code>.
+    </p>
+</details>
