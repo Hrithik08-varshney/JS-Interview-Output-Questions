@@ -967,3 +967,33 @@ console.log(num);
         To prevent re-declaration, you can use <code>let</code> or <code>const</code> instead of <code>var</code>.
     </p>
 </details>
+
+---
+
+32. **What will be the output?**
+
+```javascript
+let x = "b";
+let y = "a";
+
+console.log(x + y + + y + y);
+```
+<details>
+ <summary>Answer</summary>
+<b>baNaNa</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+    <ol>
+        <li><code>x</code> is assigned the string <code>"b"</code>, and <code>y</code> is assigned the string <code>"a"</code>.</li>
+        <li><code>x + y</code>: Concatenates <code>"b"</code> and <code>"a"</code>, resulting in <code>"ba"</code>.</li>
+        <li><code>+y</code>: The unary <code>+</code> operator attempts to convert <code>"a"</code> into a number. 
+            Since <code>"a"</code> is not a valid number, the result is <code>NaN</code> (Not-a-Number).</li>
+        <li><code>x + y + +y + y</code>: 
+            <ul>
+                <li>Expands to <code>"ba" + NaN + "a"</code>.</li>
+                <li>String concatenation occurs, resulting in <code>"baNaN"</code>.</li>
+            </ul>
+        </li>
+    </ol>
+</details>
