@@ -997,3 +997,33 @@ console.log(x + y + + y + y);
         </li>
     </ol>
 </details>
+
+---
+
+33. **What will be the output?**
+
+```javascript
+console.log(x);
+
+var x;
+```
+<details>
+ <summary>Answer</summary>
+<b>undefined</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+ <ol>
+    <li><strong>Variable Hoisting:</strong> 
+        In JavaScript, variable declarations using <code>var</code> are moved to the top of their scope during the compilation phase. However, the initialization (if any) remains in place.
+    </li>
+    <li><strong>Execution:</strong>
+      <ul>
+        <li>The declaration <code>var x;</code> is hoisted to the top.</li>
+        <li>Before the variable is initialized, its value is <code>undefined</code>.</li>
+        <li>When <code>console.log(x);</code> is executed, it logs <code>undefined</code>.</li>
+      </ul>
+    </li>
+  </ol>
+</details>
+
