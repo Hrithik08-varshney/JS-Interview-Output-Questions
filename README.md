@@ -1027,3 +1027,39 @@ var x;
   </ol>
 </details>
 
+---
+
+34. **What will be the output?**
+
+```javascript
+let x = true + true;
+let y = x + false;
+
+console.log(y);
+```
+<details>
+ <summary>Answer</summary>
+<b>2</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+ <ol>
+    <li>
+      <strong>Step 1:</strong> <code>let x = true + true;</code><br>
+      - The <code>+</code> operator converts boolean values to numbers.<br>
+      - <code>true</code> becomes <code>1</code>, so <code>true + true</code> is equivalent to <code>1 + 1</code>.<br>
+      - Result: <code>x = 2</code>.
+    </li>
+    <li>
+      <strong>Step 2:</strong> <code>let y = x + false;</code><br>
+      - <code>x</code> is <code>2</code> from Step 1.<br>
+      - <code>false</code> is converted to <code>0</code>, so <code>x + false</code> is equivalent to <code>2 + 0</code>.<br>
+      - Result: <code>y = 2</code>.
+    </li>
+    <li>
+      <strong>Step 3:</strong> <code>console.log(y);</code><br>
+      - The value of <code>y</code> is <code>2</code>, so it logs: <strong>2</strong>.
+    </li>
+  </ol>
+</details>
+
