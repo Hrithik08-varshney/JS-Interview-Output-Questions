@@ -1063,3 +1063,33 @@ console.log(y);
   </ol>
 </details>
 
+---
+
+35. **What will be the output?**
+
+```javascript
+let x = [2];
+let y = 2;
+
+console.log(x == y);
+```
+<details>
+ <summary>Answer</summary>
+<b>true</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+   <ul>
+        <li><code>x</code> is an array with a single element <code>[2]</code>.</li>
+        <li><code>y</code> is a number <code>2</code>.</li>
+        <li>
+            When using <code>==</code> (loose equality), JavaScript performs type coercion to compare the values.
+            <ul>
+                <li>The array <code>[2]</code> is converted to a string <code>"2"</code> (via <code>.toString()</code>).</li>
+                <li>The string <code>"2"</code> is then coerced into a number <code>2</code>.</li>
+            </ul>
+        </li>
+        <li>As a result, the comparison <code>2 == 2</code> evaluates to <code>true</code>.</li>
+    </ul>
+</details>
+
