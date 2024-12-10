@@ -1093,3 +1093,36 @@ console.log(x == y);
     </ul>
 </details>
 
+---
+
+36. **What will be the output?**
+
+```javascript
+const a = { b: { c: 2 } };
+const b = { ...a };
+a.b.c = 3;
+
+console.log(b.b.c);
+```
+<details>
+ <summary>Answer</summary>
+<b>3</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+   <ol>
+        <li>
+            <strong>Object Spread (<code>{ ...a }</code>):</strong>
+            <p>The spread operator creates a <strong>shallow copy</strong> of the <code>a</code> object. 
+            This means only the first level of properties is copied, and deeper levels (nested objects) 
+            are still referenced.</p>
+        </li>
+        <li>
+            <strong>Modification of <code>a.b.c</code>:</strong>
+            <p>The <code>b</code> property of <code>a</code> is an object. Since <code>b</code> is a reference 
+            to the same object in both <code>a</code> and <code>b</code> (due to the shallow copy), modifying 
+            <code>a.b.c</code> also affects <code>b.b.c</code>.</p>
+        </li>
+    </ol>
+    <p>Thus, when you log <code>b.b.c</code>, it reflects the updated value (<code>3</code>).</p>
+</details>
