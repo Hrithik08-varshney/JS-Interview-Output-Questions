@@ -1126,3 +1126,29 @@ console.log(b.b.c);
     </ol>
     <p>Thus, when you log <code>b.b.c</code>, it reflects the updated value (<code>3</code>).</p>
 </details>
+
+---
+
+37. **What will be the output?**
+
+```javascript
+let x = [1, 2, 3];
+let [, , y] = x;
+
+console.log(y);
+```
+<details>
+ <summary>Answer</summary>
+<b>3</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+    <ul>
+        <li><code>let x = [1, 2, 3];</code> initializes an array <code>x</code> with the values <code>[1, 2, 3]</code>.</li>
+        <li><code>let [, , y] = x;</code> uses <b>array destructuring</b> to assign the third element of <code>x</code> to the variable <code>y</code>. 
+            The commas <code>, ,</code> are used to skip the first two elements.
+        </li>
+        <li><code>console.log(y);</code> prints the value of <code>y</code>, which is <code>3</code>.</li>
+    </ul>
+</details>
+
