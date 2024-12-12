@@ -1152,3 +1152,27 @@ console.log(y);
     </ul>
 </details>
 
+---
+
+38. **What will be the output?**
+
+```javascript
+let x = { a: 1, b: 2 };
+let y = { b: 3 };
+let z = { ...x, ...y };
+
+console.log(z);
+```
+<details>
+ <summary>Answer</summary>
+<b>{ a: 1, b: 3 }</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+  <ul>
+        <li>The <code>...</code> (spread operator) copies properties from one object into another.</li>
+        <li>When <code>z</code> is created, the properties from <code>x</code> (<code>{ a: 1, b: 2 }</code>) are spread into it first.</li>
+        <li>Next, the properties from <code>y</code> (<code>{ b: 3 }</code>) are spread into <code>z</code>. Since <code>b</code> already exists in <code>z</code>, it gets overwritten by the value from <code>y</code> (<code>3</code>).</li>
+        <li>The final object is <code>{ a: 1, b: 3 }</code>.</li>
+    </ul>
+</details>
