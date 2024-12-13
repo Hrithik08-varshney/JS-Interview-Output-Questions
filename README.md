@@ -1176,3 +1176,39 @@ console.log(z);
         <li>The final object is <code>{ a: 1, b: 3 }</code>.</li>
     </ul>
 </details>
+
+---
+
+39. **What will be the output?**
+
+```javascript
+let x = [1, 2, 3, 5];
+
+x.forEach((e) => {
+  if (e > 2 && e < 5) return;
+  console.log(e);
+});
+```
+<details>
+ <summary>Answer</summary>
+<b>1</b>
+<b>2</b>
+<b>5</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+  <ul>
+    <li>
+      For <code>e = 1</code> and <code>e = 2</code>, the condition <code>(e > 2 && e < 5)</code> is <code>false</code>,
+      so <code>console.log(e)</code> runs, and the values <strong>1</strong> and <strong>2</strong> are logged.
+    </li>
+    <li>
+      For <code>e = 3</code>, the condition <code>(e > 2 && e < 5)</code> is <code>true</code>, so <code>return</code>
+      is executed, skipping <code>console.log(e)</code> for this iteration.
+    </li>
+    <li>
+      For <code>e = 5</code>, the condition <code>(e > 2 && e < 5)</code> is <code>false</code>, so <code>console.log(e)</code>
+      runs, logging <strong>5</strong>.
+    </li>
+  </ul>
+</details>
