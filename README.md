@@ -1212,3 +1212,37 @@ x.forEach((e) => {
     </li>
   </ul>
 </details>
+
+---
+
+40. **What will be the output?**
+
+```javascript
+let x = 10;
+let y = 20;
+
+console.log("total = " + x + y);
+```
+<details>
+ <summary>Answer</summary>
+<b>total = 1020</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+     <ol>
+        <li>
+            In the expression <code>"total = " + x + y</code>, JavaScript performs 
+            <strong>string concatenation</strong>.
+        </li>
+        <li>
+            <code>"total = "</code> is a string. When the <code>+</code> operator is used 
+            with a string and a number, the number is converted to a string and concatenated.
+        </li>
+        <li>
+            First, <code>"total = " + x</code> results in the string <code>"total = 10"</code>.
+        </li>
+        <li>
+            Then, <code>"total = 10" + y</code> results in the string <code>"total = 1020"</code>.
+        </li>
+    </ol>
+</details>
