@@ -1246,3 +1246,45 @@ console.log("total = " + x + y);
         </li>
     </ol>
 </details>
+
+---
+
+41. **What will be the output?**
+
+```javascript
+let x = 5;
+let y = 6;
+x += x > y ? x : y;
+
+console.log(x);
+```
+<details>
+ <summary>Answer</summary>
+<b>total = 1020</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+ <ol>
+        <li><strong>Initialization:</strong>
+            <ul>
+                <li><code>x</code> is initialized to <code>5</code>.</li>
+                <li><code>y</code> is initialized to <code>6</code>.</li>
+            </ul>
+        </li>
+        <li><strong>Conditional (ternary) operator:</strong>
+            <ul>
+                <li>The condition <code>x > y</code> is evaluated:</li>
+                <li><code>x</code> is <code>5</code>, <code>y</code> is <code>6</code>.</li>
+                <li>Since <code>5 > 6</code> is <strong>false</strong>, the result of the ternary expression is <code>y</code>, which is <code>6</code>.</li>
+            </ul>
+        </li>
+        <li><strong>Update <code>x</code>:</strong>
+            <ul>
+                <li>The <code>+=</code> operator means <code>x = x + (result of ternary expression)</code>.</li>
+                <li>Substitute the values: <code>x = 5 + 6</code>.</li>
+                <li>Now, <code>x</code> becomes <code>11</code>.</li>
+            </ul>
+        </li>
+    </ol>
+</details>
+
