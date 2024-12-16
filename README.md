@@ -1288,3 +1288,50 @@ console.log(x);
     </ol>
 </details>
 
+---
+
+42. **What will be the output?**
+
+```javascript
+let a = [1, 2, 3];
+a.push(a[2]++);
+
+console.log(a);
+```
+<details>
+ <summary>Answer</summary>
+<b>[ 1, 2, 4, 3 ]</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+ <ol>
+        <li>
+            <strong>Initial value of <code>a</code>:</strong>
+            <pre>a = [1, 2, 3]</pre>
+        </li>
+        <li>
+            <strong>Expression <code>a.push(a[2]++)</code>:</strong>
+            <ul>
+                <li>
+                    <code>a[2]++</code> retrieves the value of <code>a[2]</code> (which is <code>3</code>) 
+                    <strong>before</strong> incrementing it. So, <code>a[2]++</code> evaluates to <code>3</code>.
+                </li>
+                <li>The <code>push</code> method adds this value (<code>3</code>) to the end of the array.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>After <code>a.push(a[2]++)</code>:</strong>
+            <pre>a = [1, 2, 3, 3]</pre>
+        </li>
+        <li>
+            <strong>Increment operation:</strong>
+            <ul>
+                <li>The value of <code>a[2]</code> is incremented from <code>3</code> to <code>4</code>.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Final value of <code>a</code>:</strong>
+            <pre>a = [1, 2, 4, 3]</pre>
+        </li>
+    </ol>
+</details>
