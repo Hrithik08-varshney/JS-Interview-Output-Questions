@@ -1335,3 +1335,34 @@ console.log(a);
         </li>
     </ol>
 </details>
+
+---
+
+43. **What will be the output?**
+
+```javascript
+let x = {
+  y: "z",
+  print: () => {
+    return this.y === "z";
+  },
+};
+
+console.log(x.print());
+```
+<details>
+ <summary>Answer</summary>
+<b>false</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+<ul>
+    <li><strong>Arrow Functions and `this`:</strong> Arrow functions in JavaScript do not have their own `this` context. Instead, they inherit `this` from the surrounding lexical scope where the function was created. In this case, the arrow function inside the object `x` inherits the `this` from the global scope.</li>
+    <li><strong>Global `this`:</strong> In a browser (non-strict mode), `this` inside the arrow function refers to the global object (the `window` object). In strict mode or in Node.js, `this` would be `undefined`.</li>
+  </ul>
+
+  <h2>Why the Code Outputs `false`:</h2>
+  <p>In non-strict mode (browser), `this` inside the arrow function refers to the global `window` object, which doesn't have a property `y`. Therefore, `this.y === "z"` evaluates to <code>false</code>.</p>
+  
+  <p>In strict mode or in Node.js, `this` would be `undefined`, and attempting to access <code>this.y</code> would result in a <code>TypeError</code>.</p>
+</details>
