@@ -1366,3 +1366,36 @@ console.log(x.print());
   
   <p>In strict mode or in Node.js, `this` would be `undefined`, and attempting to access <code>this.y</code> would result in a <code>TypeError</code>.</p>
 </details>
+
+---
+
+44. **What will be the output?**
+
+```javascript
+let x = 1;
+
+console.log(x + x++);
+```
+<details>
+ <summary>Answer</summary>
+<b>2</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+    <ol>
+        <li><strong>Initial value of <code>x</code>:</strong> The variable <code>x</code> is initialized to <code>1</code>.</li>
+        <li><strong>Expression evaluation:</strong>
+            <ul>
+                <li>The <code>x++</code> is a <span class="highlight">post-increment operator</span>, meaning it returns the value of <code>x</code> <strong>before</strong> incrementing.</li>
+                <li>The expression <code>x + x++</code> is evaluated as:
+                    <ul>
+                        <li>Take the current value of <code>x</code> (<code>1</code>).</li>
+                        <li>Add the value of <code>x</code> <strong>before</strong> it is incremented (<code>1</code>).</li>
+                        <li>So, the result is <code>1 + 1 = 2</code>.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><strong>Post-expression value of <code>x</code>:</strong> After the evaluation, <code>x</code> is incremented by <code>1</code>, so its new value becomes <code>2</code>.</li>
+    </ol>
+</details>
