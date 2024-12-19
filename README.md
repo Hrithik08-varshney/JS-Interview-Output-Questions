@@ -1399,3 +1399,28 @@ console.log(x + x++);
         <li><strong>Post-expression value of <code>x</code>:</strong> After the evaluation, <code>x</code> is incremented by <code>1</code>, so its new value becomes <code>2</code>.</li>
     </ol>
 </details>
+
+---
+
+45. **What will be the output?**
+
+```javascript
+let x = 6;
+let y = typeof (x == 6);
+
+console.log(y);
+```
+<details>
+ <summary>Answer</summary>
+<b>boolean</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+   In this code, the expression (x == 6) uses the equality operator == to compare the value of x with the number 6. Since x has the value 6, the expression evaluates to true. 
+
+The typeof operator is then used to determine the data type of the result of the expression (x == 6), which is a boolean value. The typeof operator returns a string that represents the data type of its operand. 
+
+The string “boolean” has a length of 7. Therefore, the value of y is “boolean”. 
+
+Therefore, the output of console.log(y) will be “boolean”.
+</details>
