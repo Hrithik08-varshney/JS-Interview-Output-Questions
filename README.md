@@ -1424,3 +1424,24 @@ The string “boolean” has a length of 7. Therefore, the value of y is “bool
 
 Therefore, the output of console.log(y) will be “boolean”.
 </details>
+
+---
+
+46. **What will be the output?**
+
+```javascript
+let x = "5";
+let y = 3;
+
+console.log(x - y);
+```
+<details>
+ <summary>Answer</summary>
+<b>2</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+In this code, the – operator is used to subtract the value of y from the value of x. When the – operator is used with a string and a number, the string is automatically converted to a number before the subtraction operation is performed. So the string “5” is converted to the number 5. Then, the expression x – y evaluates to 5 – 3, which is 2. 
+
+Therefore, the output of console.log(x – y) will be 2.
+</details>
