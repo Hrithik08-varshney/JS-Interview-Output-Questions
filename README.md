@@ -1427,7 +1427,7 @@ Therefore, the output of console.log(y) will be “boolean”.
 
 ---
 
-45. **What will be the output?**
+46. **What will be the output?**
 
 ```javascript
 let x = "5";
