@@ -1445,3 +1445,47 @@ In this code, the – operator is used to subtract the value of y from the value
 
 Therefore, the output of console.log(x – y) will be 2.
 </details>
+
+---
+
+47. **What will be the output?**
+
+```javascript
+let x = 7;
+let y = !!x && !!!x;
+
+console.log(y);
+```
+<details>
+ <summary>Answer</summary>
+<b>false</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+<ol>
+    <li><strong>x = 7:</strong>
+      <p><code>x</code> is a non-zero number, so in a boolean context, it evaluates to <code>true</code>.</p>
+    </li>
+    <li><strong>!!x:</strong>
+      <ul>
+        <li>The first <code>!x</code> converts <code>x</code> to a boolean and negates it. Since <code>x</code> is <code>true</code>, <code>!x</code> becomes <code>false</code>.</li>
+        <li>The second <code>!</code> negates <code>false</code>, making <code>!!x</code> evaluate to <code>true</code>.</li>
+      </ul>
+    </li>
+    <li><strong>!!!x:</strong>
+      <ul>
+        <li><code>!x</code> is <code>false</code>, as explained above.</li>
+        <li>Negating <code>false</code> gives <code>true</code>, and negating <code>true</code> again results in <code>false</code>.</li>
+        <li>So, <code>!!!x</code> evaluates to <code>false</code>.</li>
+      </ul>
+    </li>
+    <li><strong>!!x && !!!x:</strong>
+      <p>This is a logical <code>AND</code> operation between <code>true</code> (<code>!!x</code>) and <code>false</code> (<code>!!!x</code>).</p>
+      <p>The result of <code>true && false</code> is <code>false</code>.</p>
+    </li>
+    <li><strong>console.log(y):</strong>
+      <p>The value of <code>y</code> is <code>false</code>, so <code>false</code> is logged to the console.</p>
+    </li>
+  </ol>
+</details>
+
