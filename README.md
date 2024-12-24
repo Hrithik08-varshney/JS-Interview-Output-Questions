@@ -1489,3 +1489,23 @@ console.log(y);
   </ol>
 </details>
 
+---
+
+48. **What will be the output?**
+
+```javascript
+let margin = "10px";
+let x = parseInt(margin);
+
+console.log(parseInt(x));
+```
+<details>
+ <summary>Answer</summary>
+<b>10</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+margin is initialized as a string with the value “10px”. The parseInt function is called on the margin, which parses the integer value 10 from the beginning of the string and returns it as a number. The resulting number 10 is assigned to the variable x.
+
+The parseInt function is called again on the value of x, which is already a number. This is not necessary, but it does not cause any errors. The resulting value of parseInt(x) is still 10, which gets outputted to the console.
+</details>
