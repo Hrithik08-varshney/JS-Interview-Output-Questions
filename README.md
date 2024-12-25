@@ -1509,3 +1509,23 @@ margin is initialized as a string with the value “10px”. The parseInt functi
 
 The parseInt function is called again on the value of x, which is already a number. This is not necessary, but it does not cause any errors. The resulting value of parseInt(x) is still 10, which gets outputted to the console.
 </details>
+
+---
+
+49. **What will be the output?**
+
+```javascript
+console.log(typeof(8));
+console.log(typeof(8.7));
+console.log(typeof(-8));
+```
+<details>
+ <summary>Answer</summary>
+<b>number</b><br/>
+<b>number</b><br/>
+<b>number</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+In JavaScript, all numeric values (integers, floating-point numbers, and negative numbers) are of the type number.
+</details>
