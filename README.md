@@ -1529,3 +1529,16 @@ console.log(typeof(-8));
  <summary>Explanation</summary>
 In JavaScript, all numeric values (integers, floating-point numbers, and negative numbers) are of the type number.
 </details>
+
+---
+
+50. **What will typeof NaN return and why?**
+
+<details>
+ <summary>Answer</summary>
+<b>number</b>
+</details>
+<details>
+ <summary>Explanation</summary>
+In JavaScript, NaN is considered a special number and therefore its type is number.
+</details>
