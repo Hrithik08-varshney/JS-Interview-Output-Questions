@@ -1532,7 +1532,7 @@ In JavaScript, all numeric values (integers, floating-point numbers, and negativ
 
 ---
 
-49. **What will typeof NaN return and why?**
+50. **What will typeof NaN return and why?**
 
 <details>
  <summary>Answer</summary>
