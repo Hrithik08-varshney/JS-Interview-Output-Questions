@@ -1542,3 +1542,68 @@ In JavaScript, all numeric values (integers, floating-point numbers, and negativ
  <summary>Explanation</summary>
 In JavaScript, NaN is considered a special number and therefore its type is number.
 </details>
+
+---
+
+51. **What is the output of following code?**
+
+  <pre>
+console.log(0 == undefined);      
+console.log(0 === undefined);     
+console.log(0 === {});            
+console.log(0 == {});             
+console.log(undefined === undefined); 
+console.log(undefined === {});    
+console.log(undefined == {});
+  </pre>
+<details>
+ <summary>Explanation</summary>
+<h2>Explanation</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Expression</th>
+        <th>Result</th>
+        <th>Explanation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>0 == undefined</td>
+        <td>false</td>
+        <td>`undefined` only loosely equals `null`, not `0`</td>
+      </tr>
+      <tr>
+        <td>0 === undefined</td>
+        <td>false</td>
+        <td>Strict equality, different types (`number` vs `undefined`)</td>
+      </tr>
+      <tr>
+        <td>0 === {}</td>
+        <td>false</td>
+        <td>Strict equality, different types (`number` vs `object`)</td>
+      </tr>
+      <tr>
+        <td>0 == {}</td>
+        <td>false</td>
+        <td>`{}` converts to string or NaN, which isn't equal to `0`</td>
+      </tr>
+      <tr>
+        <td>undefined === undefined</td>
+        <td>true</td>
+        <td>Same type and value</td>
+      </tr>
+      <tr>
+        <td>undefined === {}</td>
+        <td>false</td>
+        <td>Different types (`undefined` vs `object`)</td>
+      </tr>
+      <tr>
+        <td>undefined == {}</td>
+        <td>false</td>
+        <td>No coercion makes them equal</td>
+      </tr>
+    </tbody>
+  </table>
+</details>
+
