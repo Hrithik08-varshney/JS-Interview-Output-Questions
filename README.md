@@ -1607,3 +1607,52 @@ console.log(undefined == {});
   </table>
 </details>
 
+---
+
+52. **What is the output of following code?**
+  <pre>t
+function test() {
+  console.log(a);
+  var a = 1;
+  setTimeout(() => {
+    console.log('Timeout:', a);
+  }, 0);
+  (function immediate() {
+    console.log('Immediate:', a);
+    a = 2;
+  })();
+  console.log('After IIFE:', a);
+}
+test();
+  </pre>
+  <details>
+ <summary>Answer</summary>
+<b>undefined</b><br/>
+<b>Immediate: 1</b><br/>
+<b>After IIFE: 2</b><br/>
+<b>Timeout: 2</b><br/>
+</details>
+<details>
+ <summary>Explanation</summary>
+  <div class="step">
+    <h3>Step 1: <code>console.log(a);</code></h3>
+    <p><code>var a</code> is hoisted but not initialized yet, so:</p>
+    <p class="output">undefined</p>
+  </div>
+  <div class="step">
+    <h3>Step 2: Inside the IIFE</h3>
+    <p><code>a</code> is now <code>1</code>, so:</p>
+    <p class="output">Immediate: 1</p>
+    <p>Then <code>a = 2</code> is executed.</p>
+  </div>
+  <div class="step">
+    <h3>Step 3: <code>console.log('After IIFE:', a);</code></h3>
+    <p>After the IIFE, <code>a</code> is <code>2</code>, so:</p>
+    <p class="output">After IIFE: 2</p>
+  </div>
+  <div class="step">
+    <h3>Step 4: Inside <code>setTimeout</code></h3>
+    <p>This runs asynchronously after the call stack is clear. <code>a</code> is still <code>2</code>, so:</p>
+    <p class="output">Timeout: 2</p>
+  </div>
+</details>
